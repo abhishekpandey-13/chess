@@ -8,9 +8,9 @@ def possible_haathi(current,end):
 #pyada
 def possible_pyada(current,end):
     if((end-current)==8 or (current-end)==8):
-        print("true")
+        return "true"
     else:
-        print("false")
+        return "false"
 #oontth
 def possible_oontth(current,end):
     if((end-current)%9==0 or (end-current)%7==0):
@@ -20,19 +20,19 @@ def possible_oontth(current,end):
 #ghoda
 def possible_ghoda(current,end):
     if(abs(end-current) in [6,10,15,17]):
-        print("true")
+        return "true"
     else:
-        print("false")
+        return "false"
 #raja
 def possible_raja(current,end):
     if(abs(end-current) in [1,7,8,9]):
-        print("true")
+        return "true"
     else:
-        print("false")
+        return "false"
 
 def possible_rani(current,end):
     if((possible_oontth(current,end) == 'true') or (possible_haathi(current,end) == 'true')):
-        print('true')
+        print("true")
     else:
-        print('False')
-possible_rani(57,1)
+        print("false")
+possible_rani(1,57)
